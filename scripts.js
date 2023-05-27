@@ -1,0 +1,1 @@
+$("a[href*=\"#\"]").on("click",function(a){a.preventDefault(),$("html, body").animate({scrollTop:$($(this).attr("href")).offset().top},500,"linear")}),$(window).on("scroll",function(){$("section").each(function(){if($(window).scrollTop()>=$(this).offset().top-100){var a=$(this).attr("id");$("nav a").removeClass("active"),$("nav a[href=\"#"+a+"\"]").addClass("active")}})});
